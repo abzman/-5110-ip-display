@@ -17,4 +17,5 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 (sleep 1;python /home/pi/ip.py)&
+mosquitto_sub -h localhost -v -t '#'&
 exit 0
